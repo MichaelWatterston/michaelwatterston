@@ -1,0 +1,530 @@
+:root {
+  --primary: #111;
+  --accent: #0aa870;
+  --text: #333333;
+  --muted: #666;
+  --rule: #eee;
+  --bg: #fff;
+  --white: #fff;
+  --transition: 0.3s ease;
+  --tile-radius: 25px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--primary);
+  line-height: 120%;
+  font-weight: 500;
+}
+
+h1 {
+  margin-bottom: 2.5rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+
+  /* Skip link for keyboard users */
+  .skip-link {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    transform: translateY(-150%);
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    z-index: 2000;
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid var(--accent);
+  }
+
+  font-family: 'Geist',
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  Roboto,
+  Helvetica,
+  Arial,
+  sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Layout helpers now inlined in HTML style tag for the main structure */
+
+.imagecaptions {
+  font-size: 0.8rem;
+}
+
+/* Footer styles consolidated below */
+
+/* Accessibility focus outline */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+
+/* Minimal reset for this layout */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 24px;
+  padding-top: 35px;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: #fff;
+  border-bottom: 0px solid #eee;
+  z-index: 1000;
+  padding: 12px 0;
+}
+
+.topbar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* .name { font-weight: 700; } */
+
+/* About page container width */
+.pageContainer {
+  max-width: 780px;
+  margin-inline: auto;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.pageContainer img {
+  max-width: 100%;
+}
+
+.pageContainer h4 {
+  margin: 80px 0 20px 0;
+}
+
+.pageContainer figcaption {
+  text-align: center;
+}
+
+.multi-row-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.multi-row {
+  margin-bottom: 2rem;
+}
+
+.multi-row .title {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.multi-row .entity {
+  font-size: 1.2rem;
+}
+
+.multi-row .years {
+  font-size: 1rem;
+  color: #707070;
+}
+
+.about-intro {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Unused legacy about/meta utilities removed */
+
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin-bottom: 8rem;
+}
+
+.hero-title .dot {
+  color: #000;
+}
+
+.lede {
+  margin-top: 1rem;
+  color: #444;
+  max-width: 60ch;
+}
+
+/* Unused work-list styles removed */
+
+/* Unused section-title removed */
+
+/* Home page About section only */
+p.about {
+  max-width: 780px;
+  margin: 10rem auto 5rem;
+  color: #333;
+  text-align: left;
+  font-size: clamp(1.05rem, 2.4vw, 1.5rem);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.contact {
+  margin-top: 2.5rem;
+  gap: 0.75rem;
+  align-items: center;
+  max-width: 780px;
+  margin: 10rem auto 10rem;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.contact .email p {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* Unused copy button/status styles removed */
+
+/* Make .email element keyboard-focusable button look like text */
+.email {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.email:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+footer {
+  margin-top: 4rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Prevent anchor targets from hiding under the sticky topbar */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Staggered two-column grid */
+.stagger-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  row-gap: 0rem;
+  column-gap: 9rem;
+}
+
+.stagger-grid figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.stagger-grid img {
+  display: block;
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.stagger-grid video {
+  display: block;
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.stagger-grid figcaption {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 0 4px;
+  color: #333;
+}
+
+.stagger-grid .cap-title {
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+.stagger-grid .cap-desc {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 2px;
+  text-align: left;
+}
+
+.cap-builtwith {
+  text-align: left;
+}
+
+.stagger-grid>.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Offset the second column items to create a staggered row effect */
+.stagger-grid > .project-link:nth-of-type(2n) {
+  margin-top: 5rem;
+}
+
+/* Make the first even item more offset */
+.stagger-grid > .project-link:nth-of-type(2) {
+  margin-top: 19rem;
+}
+
+/* Add offset for left column items as well, but not the very first item */
+.stagger-grid > .project-link:nth-of-type(odd):not(:first-of-type) {
+  margin-top: -13rem;
+}
+
+@media (max-width: 720px) {
+  /* Reset any stagger offsets and use a simple vertical flow */
+  .stagger-grid > .project-link,
+  .stagger-grid > .project-link:nth-of-type(odd),
+  .stagger-grid > .project-link:nth-of-type(even),
+  .stagger-grid > .project-link:nth-of-type(2),
+  .stagger-grid > .project-link:nth-of-type(odd):not(:first-of-type) {
+    margin-top: 0;
+  }
+  .stagger-grid {
+    display: block;
+  }
+
+  .stagger-grid > .project-link {
+    display: block;
+    margin: 0 0 2rem 0;
+  }
+
+  .stagger-grid figure {
+    margin-top: 0;
+  }
+
+  /* Scale media to screen width with consistent aspect ratio */
+  .stagger-grid img,
+  .stagger-grid video {
+    height: auto;
+  }
+
+  /* General rhythm and spacing tweaks */
+  .container {
+    padding: 16px;
+    padding-top: 24px;
+  }
+
+  .topbar {
+    margin-bottom: 3rem;
+  }
+
+  .hero-title {
+    margin-bottom: 3rem;
+    font-size: clamp(2rem, 8vw, 2.6rem);
+  }
+
+  /* Caption typography */
+  .stagger-grid .cap-title {
+    font-size: 1.25rem;
+  }
+  .stagger-grid .cap-desc {
+    font-size: 1rem;
+  }
+
+  /* Contact section sizing */
+  .contact {
+    margin: 4rem auto 6rem;
+  }
+
+  .contact .email p {
+    font-size: clamp(1.25rem, 7vw, 2rem);
+  }
+
+  /* About page container type size */
+  .pageContainer {
+    padding: 0 16px;
+    font-size: clamp(1rem, 3.7vw, 1.3rem);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Slightly tighter type on very small screens */
+  .hero-title {
+    font-size: clamp(1.8rem, 8.5vw, 2.2rem);
+  }
+  .contact .email p {
+    font-size: clamp(1.2rem, 7.5vw, 1.8rem);
+  }
+}
+
+/* Project detail pages */
+.project-hero {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.project-gallery {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.project-gallery video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Index-only hover: shrink container and media inwards together */
+.stagger-grid figure {
+  overflow: hidden;
+  transition: transform var(--transition);
+  transform-origin: center;
+}
+
+.stagger-grid .project-link:hover figure,
+.stagger-grid .project-link:focus-visible figure {
+  transform: none;
+}
+
+/* Ensure inner media follows container radius and centers */
+.stagger-grid figure img,
+.stagger-grid figure video {
+  transition: transform var(--transition);
+  will-change: transform;
+  border-radius: var(--tile-radius);
+}
+
+.stagger-grid .project-link:hover figure img,
+.stagger-grid .project-link:hover figure video,
+.stagger-grid .project-link:focus-visible figure img,
+.stagger-grid .project-link:focus-visible figure video {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .stagger-grid figure,
+  .stagger-grid figure img,
+  .stagger-grid figure video {
+    transition: none;
+  }
+}
+
+/* Simple modal popup */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-box {
+  background: var(--white);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 90vw;
+  width: 520px;
+  text-align: center;
+}
+
+.modal-box h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-box p {
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-actions button {
+  border: 1px solid #ddd;
+  background: #fafafa;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.modal-actions button:hover {
+  background: #f2f2f2;
+}

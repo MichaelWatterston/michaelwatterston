@@ -1,2 +1,144 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+      content="Portfolio of Michael Watterston — Front-End Developer focused on accessible, performant, and responsive interfaces." />
+    <title>Michael Watterston — Front‑End Developer</title>
+    <!-- Google Fonts: Geist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <!-- Top bar -->
+    <header class="topbar" aria-label="Top navigation">
+      <a href="index.html" class="name" aria-label="Home">Michael Watterston</a>
+      <nav aria-label="Primary">
+        <a href="about.html" style="margin-right: 1rem;">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- Typographic hero -->
+      <section id="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="hero-title">
+          FrontEnd<span class="dot">.</span> Accessibility<span
+            class="dot">.</span> Innovation<span class="dot">.</span> & More
+        </h1>
+      </section>
 
+      <!-- Projects list -->
+      <section class="stagger-grid" role="list" aria-label="Projects">
+        <a class="project-link" href="project-1.html" role="listitem">
+          <figure>
+            <img src="assets/project1/hero1.png" alt="CAISY AI Robot">
+            <figcaption>
+              <div class="cap-title">CAISY AI Robot</div>
+              <div class="cap-desc">A interactive padeatric static display robot
+                & SaaS platform for hopistals & clinics. In partnership with the
+                AHSN (Academic Health Science Network) and UK NHS Trust.</div>
+              <div class="cap-builtwith">Tensorflow Machine learning | Node.js |
+                ReactNative | NextJS | Robotics | AWS | 3D Printing and
+                more</div>
+            </figcaption>
+          </figure>
+        </a>
+        <a class="project-link" href="project-2.html" role="listitem">
+          <figure>
+            <video src="assets/project2/demovideo1.MOV" muted playsinline
+              autoplay loop preload="metadata"
+              aria-label="PopularPilot.com & App"></video>
+            <figcaption>
+              <div class="cap-title">PopularPilot.com & App</div>
+              <div class="cap-desc">A website and mobile app designed to be a
+                visual digest for aviation enthusiasts around the world.</div>
+              <div class="cap-builtwith">ReactNative | Amazon AWS S3 | AWS
+                Lightsail </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a class="project-link" href="project-3.html" role="listitem">
+          <figure>
+            <video src="assets/project3/herovideo1.MOV" muted playsinline
+              autoplay loop preload="metadata"
+              aria-label="HairPadding.com"></video>
+            <figcaption>
+              <div class="cap-title">HairPadding.com</div>
+              <div class="cap-desc">An eCommerce store + product branding.
+                HairPadding supplies thousands of customers across the
+                world.</div>
+              <div class="cap-builtwith">PHP | MySQL | AWS Lightsail | AWS
+                Workmail </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a class="project-link" href="project-4.html" role="listitem">
+          <figure>
+            <img src="assets/project4/hero4.png" alt="PowerOfWomen.org.uk">
+            <figcaption>
+              <div class="cap-title">PowerOfWomen.org.uk</div>
+              <div class="cap-desc">A community of over 120,000, the POW - Power
+                of Women campaign website & a custom voting system designed to
+                aid the wearepower.net awards.</div>
+              <div class="cap-builtwith">ReactJS | PHP | AJAX | MySQL </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a class="project-link" href="project-5.html" role="listitem">
+          <figure>
+            <img src="assets/project5/3dedit1.jpg" alt="The Georgian Theathre">
+            <figcaption>
+              <div class="cap-title">The Georgian Theathre</div>
+              <div class="cap-desc">A social network mobile app for events at
+                the Georgian Theathre music venue in Stockton-on-Tees, UK </div>
+              <div class="cap-builtwith">ReactNative | PWA | Wordpress CMS API's
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+        <!-- Optional future project tile template kept without external URLs -->
+      </section>
+
+      <!-- About -->
+      <p class="about">I’m a front‑end developer based in the UK & Netherlands
+        with over 7+ years of experience.
+        I focus on accessible UX, user-centric innovation, and product design .
+        I enjoy collaborating with teams to turn ideas into usable
+        interfaces.</p>
+
+      <!-- Contact -->
+      <div class="contact" aria-live="polite">
+        <p>Get in touch <span>(Click to copy)</span></p>
+        <div class="email" data-email="hello@michaelwatterston.com" role="button" tabindex="0">
+          <p>hello@michaelwatterston.com</p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      <p>© <span id="year"></span> Michael Watterston</p>
+    </footer>
+
+    <!-- Modal for portfolio notice -->
+    <div id="portfolio-modal" class="modal-overlay" role="dialog"
+      aria-modal="true" aria-labelledby="portfolio-modal-title"
+      aria-hidden="true">
+      <div class="modal-box">
+        <h3 id="portfolio-modal-title">Portfolio in progress</h3>
+        <p>Thanks for checking it out, page is currently being built.</p>
+        <div class="modal-actions"><button id="modal-close"
+            type="button">Close</button></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
