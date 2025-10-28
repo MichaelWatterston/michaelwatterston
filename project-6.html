@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project 6 - Michael Watterston" />
+  <title>Project 6 - Michael Watterston</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <main id="main" class="container">
+    <header class="topbar" aria-label="Top navigation">
+      <a href="index.html" class="name" aria-label="Home">Michael Watterston</a>
+      <nav>
+        <a href="about.html" style="margin-right: 1rem;">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <h1>Project 6</h1>
+    <p class="lede">A brief summary of Project 6. Replace this with real content.</p>
+
+    <section class="card" style="margin-top:1.5rem" aria-label="Overview">
+      <h2 class="sr-only">Overview</h2>
+      <p>Describe the problem, your role, and the impact. Add images or a gallery as needed.</p>
+    </section>
+
+  <img class="project-hero" src="assets/project6/1f01cb07-eb01-49be-a10c-04d7ba9877b7.png" alt="Project 6 hero" />
+    <section class="project-gallery" aria-labelledby="project6-gallery-title">
+      <h2 id="project6-gallery-title" class="sr-only">Project 6 gallery</h2>
+  <img src="assets/project6/1f01cb07-eb01-49be-a10c-04d7ba9877b7.png" alt="Project 6 gallery image A" />
+  <img src="assets/project6/1f01cb07-eb01-49be-a10c-04d7ba9877b7.png" alt="Project 6 gallery image B" />
+  <img src="assets/project6/1f01cb07-eb01-49be-a10c-04d7ba9877b7.png" alt="Project 6 gallery image C" />
+  <img src="assets/project6/1f01cb07-eb01-49be-a10c-04d7ba9877b7.png" alt="Project 6 gallery image D" />
+    </section>
+
+    <footer style="margin-top: 4rem; color: #777; font-size: .9rem;">
+      <p>© <span id="year"></span> Michael Watterston</p>
+    </footer>
+  </main>
+  <script>
+    const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

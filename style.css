@@ -137,6 +137,12 @@ body {
 
 .pageContainer img {
   max-width: 100%;
+  padding-top: 30px;
+}
+
+.pageContainer video {
+  max-width: 100%;
+  padding-top: 30px;
 }
 
 .pageContainer h4 {
@@ -527,4 +533,32 @@ footer {
 
 .modal-actions button:hover {
   background: #f2f2f2;
+}
+
+/* Utility: indent lists from the left edge */
+.list-indent {
+  /* Provide a comfortable indent while keeping bullets visible */
+  margin-left: 1.25rem;
+  margin-top: 15px;
+  padding-left: 1.25rem;
+  list-style: disc outside;
+}
+
+/* Optional tighter spacing for items in indented lists */
+.list-indent > li + li {
+  margin-top: 0.35rem;
+}
+
+/* Utility: center text on its own line */
+.center-text {
+  display: block;
+  text-align: center;
+}
+
+/* Utility: center media within figures/containers */
+.center-media img,
+.center-media video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

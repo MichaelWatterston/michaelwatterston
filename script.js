@@ -34,36 +34,36 @@ if (copyBtn) {
 }
 
 // Portfolio in progress modal for index project links
-(() => {
-  const modal = document.getElementById('portfolio-modal');
-  const closeBtn = document.getElementById('modal-close');
-  if (!modal) return; // Only on index
+// (() => {
+//   const modal = document.getElementById('portfolio-modal');
+//   const closeBtn = document.getElementById('modal-close');
+//   if (!modal) return; // Only on index
 
-  const showModal = () => {
-    modal.classList.add('show');
-    modal.setAttribute('aria-hidden', 'false');
-    // Auto close after 1500ms
-    if (showModal._to) clearTimeout(showModal._to);
-    showModal._to = setTimeout(hideModal, 5000);
-  };
-  const hideModal = () => {
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden', 'true');
-  };
+//   const showModal = () => {
+//     modal.classList.add('show');
+//     modal.setAttribute('aria-hidden', 'false');
+//     // Auto close after 1500ms
+//     if (showModal._to) clearTimeout(showModal._to);
+//     showModal._to = setTimeout(hideModal, 5000);
+//   };
+//   const hideModal = () => {
+//     modal.classList.remove('show');
+//     modal.setAttribute('aria-hidden', 'true');
+//   };
 
-  // Intercept clicks on home grid project links
-  const projectLinks = document.querySelectorAll('.stagger-grid .project-link');
-  projectLinks.forEach((a) => {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      showModal();
-    });
-  });
+//   // Intercept clicks on home grid project links
+//   const projectLinks = document.querySelectorAll('.stagger-grid .project-link');
+//   projectLinks.forEach((a) => {
+//     a.addEventListener('click', (e) => {
+//       e.preventDefault();
+//       showModal();
+//     });
+//   });
 
-  // Close button and overlay click
-  if (closeBtn) closeBtn.addEventListener('click', hideModal);
-  modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
-})();
+//   // Close button and overlay click
+//   if (closeBtn) closeBtn.addEventListener('click', hideModal);
+//   modal.addEventListener('click', (e) => { if (e.target === modal) hideModal(); });
+// })();
 
 // Click on .email: copy to clipboard and temporarily show "Email Copied"
 const emailBlocks = document.querySelectorAll('.email');

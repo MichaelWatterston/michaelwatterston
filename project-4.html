@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Power of Women - interactive website specification and build. Concise overview of goals, requirements, information architecture, accessibility, hosting, and timelines." />
+  <title>Power of Women - Website Case Study - Michael Watterston</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <main id="main" class="container">
+      <header class="topbar" aria-label="Top navigation">
+        <a href="index.html" aria-label="Home">Michael
+          Watterston</a>
+        <nav>
+          <a href="about.html" style="margin-right: 1rem;">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+      <div class="pageContainer">
+  <h1>Power of Women</h1>
+        <p class="about-intro">
+          POW represents a community of over 120,000 people. As the sole developer tasked on this project, I helped shape the design and developed the code for the Power of Women website. <br><br>A project designed to inspire girls across the Tees Valley with real stories, practical resources, and clear pathways into education and careers.
+        </p>
+
+        <figure>
+          <img src="assets/project4/powlogos.png" alt="Power of Women corporate logo branding">
+          <figcaption>
+            <div class="imagecaptions">Power of Women corporate logo branding</div>
+          </figcaption>
+        </figure>
+
+        <section aria-label="Project overview">
+          <h4>Project overview</h4>
+          <p>
+            Delivered in collaboration with Allies Group and Tucan Studio, the site serves two audiences: girls aged 11–18 and inspiring women 18+. It’s designed to scale nationally with clear information architecture, accessible templates, and simple content operations.
+          </p>
+        </section>
+
+        <section aria-label="Goals">
+          <h4>Website goals</h4>
+          <ul class="list-indent">
+            <li>1,000 sessions in the first 30 days post‑launch</li>
+            <li>&lt; 70% bounce rate, ~3 pages per session, ~2:00 time on page</li>
+            <li>100 sign‑ups from girls for story updates</li>
+            <li>50 new story submissions from inspiring women</li>
+            <li>Clear signposting to support organisations</li>
+          </ul>
+        </section>
+
+        <section aria-label="Key requirements">
+          <h4>Key requirements</h4>
+          <p>
+            The site surfaces engaging content through intuitive navigation and search. It also enables women to submit their stories for editorial review, and integrates a third‑party donations platform via API.
+          </p>
+          <ul class="list-indent">
+            <li><strong>Content</strong>: long‑form stories, video, careers articles, and resources clustered by taxonomy.</li>
+            <li><strong>Story upload</strong>: account creation, profile, media library integration (e.g., Unsplash), editor approval flow.</li>
+            <li><strong>Donations</strong>: integrate selected provider via API once chosen.</li>
+          </ul>
+        </section>
+
+        <section aria-label="Information architecture">
+          <h4>Information architecture</h4>
+          <p>
+            Scalable sitemaps, clear content types, and site‑wide hierarchical taxonomies to drive discovery and relevance.
+          </p>
+          <ul class="list-indent">
+            <li><strong>Content types</strong>: pages, stories/profiles, educative articles, updates, sign‑up/upload.</li>
+            <li><strong>Taxonomies</strong>: age, subject area (by key stage), career options, education level, location.</li>
+            <li><strong>Search</strong>: Algolia for fast, relevant filtering across Individuals, Sectors, Job types, Courses, Careers advice, Salaries, Apprenticeships, Mentors, Volunteering, and Internships.</li>
+          </ul>
+          <figure>
+            <img src="assets/project4/sitemap.png" alt="Sitemap and taxonomy">
+            <figcaption>
+              <div class="imagecaptions">Sitemap & taxonomy exploration</div>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section aria-label="Design and content">
+          <h4>Design and content</h4>
+          <p>
+            Wireframes informed content layouts and user journeys across desktop and mobile. Designs were produced in Adobe XD with a focus on readability, media, and progression cues. Designed by Messila Watkinson.
+          </p>
+          <figure>
+            <img src="assets/project4/wireframe1.png" alt="Example design screens for the Power of Women site">
+            <figcaption>
+              <div class="imagecaptions">Design - Adobe XD explorations</div>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="assets/project4/hero1.png" alt="Example design screens for the Power of Women site">
+            <figcaption>
+              <div class="imagecaptions">Design - Adobe XD explorations</div>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section aria-label="Development">
+          <h4>Development</h4>
+          <p>
+            Custom built PHP website and custom ReactJS Components built on WordPress CMS (Gutenberg) for flexible content blocks. Minimal plugins, editorial workflows, and strong accessibility and performance baselines.
+          </p>
+          <ul class="list-indent">
+            <li><strong>Stack</strong>: PHP 7.2+, ReactJS, MySQL, AJAX, Custom built React Gutenberg editor.</li>
+            <li><strong>Accessibility</strong>: WCAG 2.1 AAA target.</li>
+            <li><strong>Support</strong>: Latest 2 versions of Chrome, Firefox, Safari, Edge. Fully responsive.</li>
+            <li><strong>Speed</strong>: Core Web Vitals (LCP, FID, CLS) optimised; Lighthouse used for verification.</li>
+          </ul>
+          <figure>
+            <img src="assets/project4/hero4.png" alt="Development considerations and performance focus">
+            <figcaption>
+              <div class="imagecaptions">Development - accessibility and performance first</div>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section aria-label="Hosting and operations">
+          <h4>Hosting and operations</h4>
+          <p>
+            Hosted on Katapult.io (ROCK‑12) with cPanel and CloudLinux. Traffic scaling, robust backups, and AWS S3 storage for restore points.
+          </p>
+          <ul class="list-indent">
+            <li><strong>Server</strong>: 12 GB RAM, 4 vCores, 100 GB NVMe, 1 TB 10 Gbps bandwidth.</li>
+            <li><strong>Backups</strong>: JetBackup to AWS S3 with differential/incremental strategies.</li>
+            <li><strong>Traffic</strong>: scalable with load balancing for spikes.</li>
+          </ul>
+        </section>
+
+        <section aria-label="Timeline">
+          <h4>Timeline</h4>
+          <p>
+            Four phased delivery: <br>
+            <span class="center-text">Sitemaps and wireframes → design → development → go‑live.</span>
+          </p>
+        </section>
+
+        <section class="center-text" aria-label="Call to action">
+          <h4>In memory of late Professor Jane Turner (OBE DL)</h4>
+          <p>
+            It was an honour to help contribute to your vision.
+          </p>
+        </section>
+      </div>
+
+      <footer style="margin-top: 4rem; color: #777; font-size: .9rem;">
+        <p>© <span id="year"></span> Michael Watterston</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
